@@ -1,97 +1,97 @@
 
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
- 
-  header {
-    background-color: #666;
-    padding: 1px;
-    text-align: center;
-    font-size: 16px;
-    color: white;
-  }
-  
-  
-  nav {
-    float: left;
-    width: 30%;
-    height: 900px; 
-    background: #ccc;
-    padding: 20px;
-  }
-  
- 
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  article {
-    float: left;
-    padding: 20px;
-    width: 70%;
-    background-color: #f1f1f1;
-    height: 900px; 
-  }
-  
-  
-  section:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
- 
-  footer {
-    background-color: #777;
-    padding: 10px;
-    text-align: center;
-    color: white;
-  }
-  
- 
-  @media (max-width: 600px) {
-    nav, article {
-      width: 100%;
-      height: auto;
-    }
-  }
+  box-sizing: border-box;
+}
 
-  
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #666;
+  padding: 1px;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+
+
+nav {
+  float: left;
+  width: 30%;
+  height: 900px; 
+  background: #ccc;
+  padding: 20px;
+}
+
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 900px; 
+}
+
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
 .background {
-    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Brigham_Young_University–Idaho_medallion.svg/270px-Brigham_Young_University–Idaho_medallion.svg.png");
-    display: inline-block;
-    font-size: 0;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Brigham_Young_University–Idaho_medallion.svg/270px-Brigham_Young_University–Idaho_medallion.svg.png");
+  display: inline-block;
+  font-size: 0;
 }
 .background img {
-    -webkit-transition: all .5s;
+  -webkit-transition: all .5s;
 }
 .background img:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 .navstyle{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: #ccc;
-  
+list-style-type: none;
+margin: 0;
+padding: 0;
+width: 200px;
+background-color: #ccc;
+
 }
 .navstyle2 .navstyleHover {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
-  
+display: block;
+color: #000;
+padding: 8px 16px;
+text-decoration: none;
+
 }
 
 
 .navstyle2 .navstyleHover:hover {
-  background-color: #555;
-  color: white;
-   font-weight: bold;
+background-color: #555;
+color: white;
+ font-weight: bold;
 }
