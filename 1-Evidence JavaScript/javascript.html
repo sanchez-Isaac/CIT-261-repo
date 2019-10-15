@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaScript</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h2>Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h2>
+</header>
+<section>
+  <nav>
+    <ul class="navstyle">
+      <li class="navstyle2"><a class="navstyleHover" href="https://sanchez-isaac.github.io/CIT-261-repo/">Home</a></li>
+      <li class="navstyle2"><a class="navstyleHover" href="https://github.com/sanchez-Isaac/CIT-261-repo/tree/master/1-Evidence%20JavaScript">JavaScript Repo</a></li>
+      <li class="navstyle2"><a class="navstyleHover" href="https://byui.instructure.com/courses/65978">CIT-261 Dasboard</a></li>
+      
+      <br>  
+    <p></p>
+    </ul>
+    
+  </nav>  
+  <article>
+        <div class="container text-center">
+
+                <br><br>
+            <h1>Loops</h1>
+                <div class="container text-center">
+                        Loops are a programmed sequence of instructions that 
+                        is repeated until or while a particular condition is satisfied.
+                        In my example I'm going to display a Multiplication table.
+                </div>
+                <div>
+                    <p>Enter the multiplication table you would like to see:</p>
+                    <input style="width: 6em" type="number" id="multiNumb">
+                    <input type ="submit" onclick="multiply()">
+                </div>
+                <p id="multiplication">    </p>
+                <p>
+                    <table id="multiTables">
+                        <tr>                            
+                        </tr>
+                    </table>
+                </p>
+        </div>  
+        <p><b>_________________________________________________________________</b></p> 
+
+        <br>
+
+
+
+
+
+
+        <div class="container text-center">
+                <h1>Conditional Statements</h1>
+                    <div class="container text-center">
+                            Alternatively referred to as a conditional 
+                            expression and conditional processing, a conditional 
+                            statement is a set of rules performed if a 
+                            certain condition is met. It is sometimes referred 
+                            to as an If-Then statement, because IF a condition 
+                            is met, THEN an action is performed.
+                    </div>
+                    <div>
+                        <p>Enter the comparison numbers you would like to test:</p>
+                        <input style="width: 6em" type="number" id="condition1"> VS
+                        <input style="width: 6em" type="number" id="condition2">
+                        <input type ="submit" onclick="condition()">
+                    </div>
+                    <p id="conditionRes">    </p>
+                    
+            </div>  
+            <p><b>_________________________________________________________________</b></p> 
+
+            <br>
+
+
+  <div class="container text-center">
+                <h1>Arrays and Associative Arrays</h1>
+                    <div class="container text-center">
+                            An array is a data structure that contains a group of elements.
+                             Typically these elements are all of the same data type, such as 
+                             an integer or string. Arrays are commonly used in computer 
+                             programs to organize data so that a related set of values 
+                             can be easily sorted or searched. <br><br>
+                             Associative arrays are dynamic objects that  the user redefines as needed.
+                         When you assign values ​​to keys in a variable of type Array, the array
+                          is transformed into an object, and it loses the attributes and methods of Array.
+                           The length attribute has no effect because the variable is not longer of Array type
+                    
+                    <br><p>Example:</p>                    
+                    <code id="exampleSquare">
+                        <p>var fruits = ['Apple', 'Banana'];</p>
+                        
+                        <p style="color: green"> You can access the contents like this: </p>
+                        <p>var first = fruits[0]</p> <p style="color: white">console.log("first") > Apple </p>
+                    </code>
+                </div>
+
+
+                    <div>
+                        <p>This is a Dynamic Array from the multiply function but now it accepts text:</p>
+                        
+                    </div>
+                    <p id="arrayExamp">
+                            <table id="arrayExampTable">
+                                    <tr>                            
+                                    </tr>
+                                </table>    </p>
+                    
+            </div>  
+            <p>Add To the array: </p>
+            <input style="width: 6em" type="text" id="addArrayValues"> 
+                        <input type ="submit" onclick="arrayAdd()">
+
+
+                        <br>
+
+            <p><b>_________________________________________________________________</b></p> 
+
+
+            <br>
+
+
+
+
+            <div class="container text-center">
+                    <h1>Variables</h1>
+                        <div class="container text-center"><p>                                Variables in JavaScript are containers which hold reusable data. It is the basic unit of storage in a program.
+                            </p>
+                            <ul>
+                                    <li>The value stored in a variable can be changed during program execution.</li>
+                                    <li>A variable is only a name given to a memory location, all the operations done on the variable effects that memory location.</li>
+                                    <li>In JavaScript, all the variables must be declared before they can be used.</li>
+                                  </ul> 
+                        
+                        
+                        <br><p>Review my created variables:</p>                    
+                        <code id="exampleSquare">                            
+                            <p style="color: green"> Press F12 and go to the console: </p>
+                            <p>array</p>
+                            <p>leng</p> 
+                            <p>d</p>
+                            <p>credit</p>
+                            <p>SSN</p>
+                            
+                            
+                            
+                            <p style="color: white">THERE ARE MORE VARIABLES, BUT THEY ARE PRIVATE INSIDE OTHER FUNCTIONS </p>
+                        </code>
+                    </div>
+                    <br><br><br><br><br>
+
+  </article>
+</section>
+<footer>
+  <p id="foot"></p>
+</footer>
+<script type='text/javascript' src="scriptJS.js"></script>
+</body>
+</html>
+
+
