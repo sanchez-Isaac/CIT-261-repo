@@ -1,14 +1,6 @@
 /*ES6 Classes, Constructors and Inheritance**/
 
 
-
-
-
-
-
-
-
-
 class Car{
     /**Constructors run when a class is instantiated,
      *  when an object is created*/
@@ -32,15 +24,6 @@ getCost   () { return this.cost;  }
 }
 
 
-
-
-
-
-
-
-
-
-
 /**Once the Class is created, we create a new object and 
  * pass the values that the class can hold */
 let car = new Car("Honda", "Hatchback", "A lot", "$10,000");
@@ -48,33 +31,13 @@ let car2 = new Car("Masserati", "Sedan", "A lot more", "$50,000");
 let car3 = new Car("Ferrari", "Sedan", "A lot more", "$100,000");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /** by using ther NEW keyword, we create an instance of the class
  * Car, and create an object of it */
-
-
-
 
 
 console.log(car.getName() + ", " + car.getType() + ", weight: " + car.getWeight()+ ",  Cost: " + car.getCost());
 console.log(car2.getName() + ", " + car2.getType() + ", weight: "  + car2.getWeight()+ ", Cost: " + car2.getCost());
 console.log(car3.getName() + ", " + car3.getType() + ", weight: "  + car3.getWeight()+ ", Cost: " + car3.getCost());
-
-
-
-
 
 
 

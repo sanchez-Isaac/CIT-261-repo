@@ -118,6 +118,7 @@ document.getElementById("demo2").innerHTML = person.birthday();
 
 
 
+
 //METHODS
 
 

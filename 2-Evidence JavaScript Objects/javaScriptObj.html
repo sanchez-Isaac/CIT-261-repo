@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaScript Objects</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h2>Object Creation Functions, Inheritance, Properties, Methods, Instantiation</h2>
+</header>
+<section>
+  <nav>
+    <ul class="navstyle">
+      <li class="navstyle2"><a class="navstyleHover" href="https://sanchez-isaac.github.io/CIT-261-repo/">Home</a></li>
+      <li class="navstyle2"><a class="navstyleHover" href="https://github.com/sanchez-Isaac/CIT-261-repo/tree/master/1-Evidence%20JavaScript">JavaScript Repo</a></li>
+      <li class="navstyle2"><a class="navstyleHover" href="https://byui.instructure.com/courses/65978">CIT-261 Dasboard</a></li>
+      
+      <br>  
+    <p></p>
+    </ul>
+    
+  </nav>  
+  <article>
+        <div class="container text-center">
+
+                <br><br>
+            <h1>Object Creation, Propoerties</h1>
+                <div class="container text-center">
+                  An object is a collection of properties, and a property 
+                  is an association between a name (or key) and a value.
+                   A property's value can be a function, in which case 
+                   the property is known as a method. In addition to objects
+                    that are predefined in the browser, you can define
+                     your own objects. 
+                </div>
+                <div>
+                  <br><p>Example:</p>                    
+                  <code id="example">                     
+                      
+                      <p style="color: green"> You create objects like this: </p>
+                      <p>let person = new Object();<br><br>
+                      person.name = "Isaac";<br>
+                      person.lastName = "Sanchez"; <br>
+                      person.age = 28;<br>
+                      person.weigth = "Very fat";</p> 
+                      <p style="color: green"> You can access the objects properties like this: </p>
+
+                      <p style="color: white">console.log(person) > {name: "Isaac", lastName: "Sanchez", age: 28, weigth: "Very fat"} </p>
+                      <p style="color: white">console.log(person.lastname) > Sanchez </p>
+                      <p style="color: white">console.log(person.name) > Isaac </p><br>
+
+                      <p style="color: green"> You can create objects like this also: </p>
+
+                      let person2 = {<br>
+                        name : "My brother",<br>
+                        lastName : "Sanchez",<br>
+                        age : 27,<br>
+                        weigth : "Fatter than me 😉"<br> }
+                        <p style="color: green"> You can access the objects properties like this also: </p>
+                        <p style="color: white">console.log(person2) > {name: "My brother", lastName: "Sanchez", age: 27, weigth: "Fatter than me 😉"} </p>
+                        <p style="color: white">console.log(person.lastname) > Sanchez </p>
+                        <p style="color: white">console.log(person.name) > My brother </p><br>
+
+
+                  </code>
+                  <div class="container text-center"><br><br>
+                    In my example, the properties are "name", "lastName", "age" and "weigth"
+                  </div>
+
+                </div>               
+        </div>  
+        <p><b>_________________________________________________________________</b></p> 
+
+        <br>
+
+
+
+
+
+
+        <div class="container text-center">
+                <h1>Object Creation with Functions</h1>
+                    <div class="container text-center">
+                            Objects can also have functions.<br>
+                            JavaScript methods are actions that can be performed on objects. A JavaScript method is a property containing a function definition.
+                    </div>
+                    <div>
+
+                        <table class="table"><br>
+                            <tbody><tr>
+                             <th style="width:20%">Property</th>
+                             <th>Value</th>
+                            </tr>
+                            <tr>
+                             <td>firstName</td>
+                             <td>Isaac</td>
+                            </tr>
+                            <tr>
+                             <td>lastName</td>
+                             <td>Sanchez</td>
+                            </tr>
+                            <tr>
+                             <td>age</td>
+                             <td>28</td>
+                            </tr>
+                            <tr>
+                             <td>eyeColor</td>
+                             <td>Brown</td>
+                            </tr>
+                            <tr>
+                             <td>fullName</td>
+                             <td>function() {return this.firstName + " " + this.lastName;}</td>
+                            </tr>
+                           </tbody>
+                          </table>
+                          <br>
+                          <code id="exampleSquare">
+                                                           
+                              <p style="color: green"> You can create an object function like this:</p>
+                              <p>var person = {<br>
+                                  firstName: "Isaac",<br>
+                                  lastName : "Sanchez",<br>
+                                  id       : 1111,<br>
+                                  age      : 28,<br><br>
+                                  fullName : function() {<br>
+                                    return this.firstName + " " + this.lastName;<br>
+                                  },<br><br>
+                                   birthday : function() {<br>
+                                        return ++this.age;<br>
+                                      }<br>
+                                };<br></p> 
+                                <p style="color: green"> You can access an object function like this:</p>
+                                
+                                
+                                <p style="color: white">person.birthday(); ---> 29 </p>
+                                <p style="color: white">person.fullname(); ---> Isaac Sanchez </p>
+                          </code>
+
+
+                        <p>Try it your self:</p>
+                        <input style="width: 9em" type="text" id="nameToObj" placeholder="First name"><br>
+                        <input style="width: 9em" type="text" id="lastToObj" placeholder="Last name"><br>
+                        <input style="width: 9em" type="number" id="idToObj" placeholder="Random ID"><br>
+                        <input style="width: 4em" type="number" id="ageToObj" placeholder="Age"><br>
+                        <input type ="submit" onclick="objectFunct()">
+                    </div>
+                    <br>
+                    <p id="obFunctName">    </p>
+                    <p id="obFunctLast">    </p>
+                    <p id="obFunctId">    </p>
+                    <p id="obFunctAge">    </p>
+                    <p><b>Functions: </b></p>
+                    <p id="obFunctFunctFull">    </p>
+                    <p id="obFunctFunctBirth">    </p>
+                    
+            </div>  
+            <p><b>_________________________________________________________________</b></p> 
+
+            <br>
+
+
+  <div class="container text-center">
+                <h1>Inheritance</h1>
+                    <div class="container text-center">
+                        JavaScript ES6 Classes, Constructors and Inheritance:<br><br>
+                        To be able to explain what Inheritance is, we need to
+                        explain what a class is.<br>
+                        A class is a type of function, but instead of using the keyword 
+                        function to initiate it, we use the keyword class, and the properties
+                         is assigned inside a constructor() method.
+                         Use the keyword class to create a class, and always add a constructor method.<br><br>
+                         The constructor method is called each time the class object is initialized.
+
+                   
+                    <br><p>Example:</p>                    
+                    <code id="exampleSquare">    
+                        class Car{
+                          <p style="color: green">  Constructors run when a class is instantiated,
+                          when an object is created*/</p>
+                      
+                                           
+                            constructor (make, type, weight, cost){<br>
+                              <p style="color: green"> A constructor can hold parameters */</p>
+                          this.make = make;<br>
+                          this.type = type;<br>
+                          this.weight = weight;<br>
+                          this.cost = cost;<br>
+                          <p style="color: green"> Remember the "THIS" Keyword refers to the owner of the function<br>
+                           or in this case, the class ---> Car.make, Car.type etc</p>
+                           
+                      }
+                      getName   () { return this.make;  }<br>
+                      getType   () { return this.type;  }<br>
+                      getWeight () { return this.weight;}<br>
+                      getCost   () { return this.cost;  }<br>
+                      }<br>
+
+
+
+
+                        <p style="color: green"> Once the Class is created, we can create a new object and 
+                            pass the values that the class can hold: </p>
+                            let car = new Car("Honda", "Hatchback", "A lot", "$10,000");<br>
+                            let car2 = new Car("Masserati", "Sedan", "A lot more", "$50,000");<br>
+                            let car3 = new Car("Ferrari", "Sedan", "A lot more", "$100,000");<br><br><br>
+
+                            <p style="color: green"> by using ther NEW keyword, we create an 
+                              instance of the class Car, and create an object of it  </p>
+                              <p style="color: white">console.log(car.getName() + ", " + car.getType() + ", weight: " + car.getWeight()+ ",  Cost: " + car.getCost()); > <p style="color: chartreuse;">Honda, Hatchback, weight: A lot, Cost: $10,000</p> </p>
+                              <p style="color: white">console.log(car2.getName() + ", " + car2.getType() + ", weight: "  + car2.getWeight()+ ", Cost: " + car2.getCost()); > <p style="color: chartreuse;">Masserati, Sedan, weight: A lot more, Cost: $50,000</p> </p>
+                              <p style="color: white">console.log(car3.getName() + ", " + car3.getType() + ", weight: "  + car3.getWeight()+ ", Cost: " + car3.getCost()) > <p style="color: chartreuse;">Ferrari, Sedan, weight: A lot more, Cost: $100,000</p> </p>
+                    </code>
+                </div>
+                    <div>
+                        <p><b>Now, we will show how Inheritance works:</b></p>
+                        <p>We create a second class adding the extend keyword by doing this, 
+                          the new class becomes a CHILD of the preview class, 
+                          it inherits everithing from the PARENT class.</p><br>
+
+                          <code id="exampleSquare">   
+                              <p style="color: green"> PARENT CLASS</p>
+                            
+                              class Car{    <br> 
+                                  constructor (make, type, weight, cost){<br>
+                                   
+                                this.make = make;<br>
+                                this.type = type;<br>
+                                this.weight = weight;<br>
+                                this.cost = cost;<br> 
+                            }<br> 
+                            getName   () { return this.make;  }<br>
+                            getType   () { return this.type;  }<br>
+                            getWeight () { return this.weight;}<br>
+                            getCost   () { return this.cost;  }<br>
+                            }<br><br>
+      
+                                  <p style="color: green"> CHILD CLASS</p>
+                                  class SuperCar extends Car {
+
+                                    <p style="color: green"> This constructor takes the same values from the PARENT class
+                                     so it has to be there, but also a new value!</p>
+                                    constructor (make, type, weight, cost, comments) {
+                                      <p style="color: green"> The super keyword makes the same thing as the THIS keyword
+                                        This will work on the inheritance class, but the new values need to
+                                        be set</p>
+                                        super(make, type, weight, cost);
+                                        <p style="color: green"> Setting the new value</p>
+                                        this.comments = comments;
+                                      }     
+                                      <p style="color: green"> Setting the new method</p>
+                                      getComments () { return this.comments; }<br>
+                                }<br>
+                                <p style="color: green"> Create a new object</p>
+                                let moreInfo = new SuperCar("Chevy", "Sedan", "A lot more", "$50,000", "This car is super Fast " );
+                                
+                                <p style="color: white">console.log(moreInfo.getName() + ", " + moreInfo.getType() + ", weight: "  + moreInfo.getWeight()+ ", Cost: " + moreInfo.getCost() + " "+  moreInfo.getComments());</p>
+
+                                <p style="color: chartreuse"> Chevy, Sedan, weight: A lot more, Cost: $50,000 This car is super Fast</p>
+
+                                
+                                </code>
+
+                          <p>In my example, the classes are already created, and you will provide
+                             the parameters to make a new object from an Child class, in this case,
+                              the inheritance class</p>
+                        
+                    </div>
+                    <p id="arrayExamp">
+                            <table id="arrayExampTable">
+                                    <tr>                            
+                                    </tr>
+                                </table>    </p>
+                    
+            </div>  
+            <p>Fill it out your car information: </p>
+            <input style="width: 9em" type="text" id="objectIn" placeholder="Yor name"><br>
+            <input style="width: 9em" type="text" id="makeIn" placeholder="Make or brand"><br>
+            <select id="typeIn">
+                <option value="">--Please choose an option--</option>
+                <option value="Hatchback">Hatchback</option>
+                <option value="Sedan">Sedan</option>
+            </select><br>
+            <input style="width: 9em" type="text" id="weightIn" placeholder="Weight of the car"> <br>
+            <input style="width: 6em" type="text" id="costIn" placeholder="Price"> <br>
+            <textarea  rows="4" cols="50" type="text" id="commentIn" >Your comments here... </textarea> <br>
+            <input type ="submit" onclick="addInCar()">
+            <br>
+            <p id="makeInP"></p>
+            <p id="typeInP"></p>
+            <p id="weightInP"></p>
+            <p id="costInP"></p>
+            <p id="commentInP"></p>
+<br><br><br>
+
+  </article>
+</section>
+<footer>
+  <p id="foot"></p>
+</footer>
+<script type='text/javascript' src="scriptJS.js"></script>
+</body>
+</html>
+
+
