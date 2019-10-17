@@ -40,7 +40,7 @@ class SuperCar extends Car {
 }
 let moreInfo = new SuperCar("Chevy", "Sedan", "A lot more", "$50,000", "This car is super Fast " );
 
-var newObjBy;
+
 
 
 function objectFunct(){
@@ -59,17 +59,22 @@ person.age = document.getElementById("ageToObj").value;
       
 }
 
-function addInCar(){
-
-    newObjBy = document.getElementById("objectIn").value;
+function addInCar(){   
     var makeVar = document.getElementById("makeIn").value;
     var typeVar = document.getElementById("typeIn").value;
     var weightVar = document.getElementById("weightIn").value;
     var costVar = document.getElementById("costIn").value;
     var commentVar = document.getElementById("commentIn").value;
 
-    newObjBy.valueOf() = new SuperCar(makeVar, typeVar, weightVar, costVar , commentVar );
-    console.log(newObjBy + " this should be your name");
-    console.log(newObjBy.getName() + ", " + newObjBy.getType() + ", weight: "  + newObjBy.getWeight()+ ", Cost: " + newObjBy.getCost() + " "+  newObjBy.getComments());
+    var obIn = new SuperCar(makeVar, typeVar, weightVar, costVar , commentVar );
+    console.log(obIn.getName() + ", " + obIn.getType() + ", obIn: "  + obIn.getWeight()+ ", Cost: " + obIn.getCost() + " "+  obIn.getComments());
+
+    document.getElementById("makeInP").innerHTML = "Your Car make is: <b>" + obIn.getName() + "</b> it's a great car!";
+    document.getElementById("typeInP").innerHTML = "Your Car is a: <b>" + obIn.getType() + "</b>";
+    document.getElementById("weightInP").innerHTML = "Your Car weights: <b>" + obIn.getWeight() + "</b>";
+    document.getElementById("costInP").innerHTML = "Your Car vale is: <b>" + obIn.getCost() + "</b><br>";
+    document.getElementById("commentInP").innerHTML = "Your opinion about the car: <b>" + obIn.getComments() + "</b>";
+
+    
 
 }
