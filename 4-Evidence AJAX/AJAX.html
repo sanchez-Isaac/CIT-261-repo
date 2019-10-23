@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>AJAX</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h2>AJAX - requesting a JSON file</h2>
+</header>
+<section>
+  <nav>
+    <ul class="navstyle">
+      <li class="navstyle2"><a class="navstyleHover" href="https://sanchez-isaac.github.io/CIT-261-repo/">Home</a></li>
+      <li class="navstyle2"><a class="navstyleHover" href="https://github.com/sanchez-Isaac/CIT-261-repo/tree/master/1-Evidence%20JavaScript">JavaScript Repo</a></li>
+      <li class="navstyle2"><a class="navstyleHover" href="https://byui.instructure.com/courses/65978">CIT-261 Dasboard</a></li>
+      
+      <br>  
+    <p></p>
+    </ul>
+    
+  </nav>  
+  <article>
+        <div class="container text-center">
+
+                <br><br>
+            <h1>AJAX</h1>
+                <div class="container text-center">
+                    AJAX is an acronym that stands for Asynchronous JavaScript and XML, 
+                    and it describes a set of development techniques used for building 
+                    websites and web applications.<br><br>
+                    The best way to understand AJAX is to start with identifying its specific
+                     purpose in the web development process. AJAX’s core function is to update
+                      web content asynchronously (the “A” of AJAX), meaning a user’s web browser
+                       doesn’t need to reload an entire web page when only a small portion of
+                        content on the page needs to change.
+                </div>
+                <div>
+                  <br><p>Video Explanation:</p>                    
+                 
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RDo3hBL1rfA?start=18" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <br><br><br>
+                    <p>How AJAX Works:</p>
+                    <p><img class="w3-image" alt="AJAX" src="https://www.w3schools.com/xml/ajax.gif"></p>
+
+
+                    <code id="example">  
+                            <p style="color: white"> The keystone of AJAX is the XMLHttpRequest object.</p>
+                            <p style="color: white">The XMLHttpRequest object can be used to exchange data with a server 
+                                behind the scenes. This means that it is possible to update parts
+                                 of a web page, without reloading the whole page.</p><br>
+
+                                 function loadDoc() {<br>
+                                    var xhttp = new XMLHttpRequest();<br>
+                                    xhttp.onreadystatechange = function() {<br>
+                                      if (this.readyState == 4 && this.status == 200) {<br>
+                                        document.getElementById("demo").innerHTML = this.responseText;<br>
+                                      }<br>
+                                    };<br>
+                                    xhttp.open("GET", "ajax_info.txt", true);<br>
+                                    xhttp.send();<br>
+                                  }<br><br>
+
+                                  <p style="color: white">This will request the file "ajax_info.txt" and load it into the document.getElementById("demo")</p>
+                    
+                        </code>
+                  </div>
+
+                </div>               
+        </div>  
+        <p><b>_________________________________________________________________</b></p> 
+
+        <br>
+
+
+
+        <div class="container text-center">
+                <h1>requesting a JSON file</h1>
+                    <div class="container text-center">
+                        <p>The file already has data. The script will request the file and then print it on the screen </p>
+                      
+<p>Click here to request the local JSON file</p>
+
+<button type="button" onclick="requestJSON()">JSON Request</button><br>
+<p id="demo"></p>
+
+  </article>
+</section>
+<footer>
+  <p id="foot"></p>
+</footer>
+<script type='text/javascript' src="scriptJS.js"></script>
+</body>
+</html>
+
+
