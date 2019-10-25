@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Local Storage</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h2>Local Storage</h2>
+</header>
+<section>
+  <nav>
+    <ul class="navstyle">
+      <li class="navstyle2"><a class="navstyleHover" href="https://sanchez-isaac.github.io/CIT-261-repo/">Home</a></li>
+      <li class="navstyle2"><a class="navstyleHover" href="https://github.com/sanchez-Isaac/CIT-261-repo/tree/master/1-Evidence%20JavaScript">JavaScript Repo</a></li>
+      <li class="navstyle2"><a class="navstyleHover" href="https://byui.instructure.com/courses/65978">CIT-261 Dasboard</a></li>
+      
+      <br>  
+    <p></p>
+    </ul>
+    
+  </nav>  
+  <article>
+        <div class="container text-center">
+
+                <br><br>
+            <h1>Local Storage</h1>
+                <div class="container text-center">
+                    LocalStorage is a type of web storage that allows 
+                    Javascript websites and apps to store and access 
+                    data right in the browser with no expiration date. 
+                    This means the data stored in the browser will persist 
+                    even after the browser window has been closed.<br><br>
+
+                    To use localStorage in your web applications, there are 
+                    five methods to choose from:<br>
+
+                    <ol>
+                        <li><b>setItem():</b> Add key and value to localStorage</li>
+                        <li><b>getItem():</b> Retrieve a value by the key from localStorage</li>
+                        <li><b>removeItem():</b> Remove an item by key from localStorage</li>
+                        <li><b>clear():</b> Clear all localStorage</li>
+                        <li><b>key():</b> Passed a number to retrieve nth key of a localStorage</li>
+                      </ol> 
+                </div>
+                <br><br>
+                <div>
+                  <p><h3>setItem()</h3>
+                      This method just as the name implies allows you to store values in the 
+                      localStorage object.<br>
+                      
+                      It takes two parameters, a key and a value. The key can be referenced 
+                      later to fetch the value attached to it.</p>
+                      <p>localStorage can only store strings.<br>
+                          To store arrays or objects you would have to convert them to strings.<br><br>
+                          
+                          To do this we use the JSON.stringify() method before passing to setItem().</p>
+                </div>
+                <div>
+                    <code id="example"> 
+                        localStorage.setItem('name', 'Isaac Sanchez');
+                        <br><p style="color: white;">Or with an object:</p>
+                        const person = {<br>
+                          name: "Isaac Sanchez",<br>
+                          location: "CDMX",<br>
+                      }<br>
+                      
+                      localStorage.setItem('user', JSON.stringify(person));
+                        </code>
+                  </div>
+                  <div>
+                      <p><h3>getItem()</h3>                        
+                        The getItem() method allows you to access the data stored in the browser’s localStorage object.<br>
+                        
+                        It accepts only one parameter which is the key and returns the value as a string.<br><br>
+                        
+                        To retrieve the user key stored above: 
+                      </p>
+                    </div>
+                    <div>
+                        <code id="example">  
+                            localStorage.getItem('user');
+                            <p style="color: white;">This returns a string with value as:</p>
+                            <p style="color: greenyellow;">“{“name”:”Isaac Sanchez”,”location”:”CDMX”}”</p>
+                            <p style="color: white;">To use this value, you would have convert it back to an object.<br>
+
+                                To do this, we make use of JSON.parse() method which converts a JSON string into a Javascript Object.</p>
+                                JSON.parse(localStorage.getItem('user'));
+                            </code>
+                      </div>
+                      <div>
+                          <p><h3>removeItem()</h3>
+                            The removeItem() method when passed a key name, will remove that key from the storage if it exists.
+                             If there is no item associated with the given key, this method will do nothing.</p>
+                        </div>
+                        <div>
+                            <code id="example">  
+                                localStorage.removeItem('name');
+                                </code>
+                          </div>
+                          <div>
+                              <p><h3>clear()</h3>
+                                This method, when invoked clears the entire storage of all records for that domain.
+                                 It does not receive any parameters.</p>
+                            </div>
+                            <div>
+                                <code id="example">  
+                                    localStorage.clear();
+                                    </code>
+                              </div>
+                              <div>
+                                  <p><h3>key()</h3>
+                                    The key() method comes in handy in situations where you need to loop through keys
+                                     and allows you pass a number or index to local storage to retrieve the name of the key.</p>
+                                </div>
+                                <div>
+                                    <code id="example">  
+                                        var KeyName = localStorage.key(index);
+                                        </code>
+                                  </div>
+                </div>               
+        </div>  
+        <p><b>_________________________________________________________________</b></p> 
+
+        <br>
+
+
+
+        <div class="container text-center">
+                <h1>Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</h1>
+                    <div class="container text-center">
+                        <p> We are going to create a website out with localstorage</p>
+                        <p>Fill the following form:</p>
+
+                        <form action="formDisp.html" method="post">
+                            Title of the webpage:<br>
+                            <input id="tittleWeb" type="text" name="titleWeb" value="Title">
+                            <br><br>
+
+                            Your Full Name:<br>
+                            <input id="name" type="text" name="titleWeb" value="Fullname"><br><br>
+
+                            
+                            Your Major:<br>
+                            <input id="major" type="text" name="titleWeb" value="Major"><br><br>
+
+                            Content of the website:<br>
+                            <textarea id="content" rows="10" cols="80" type="text" name="lastname"></textarea><br>
+                            <br>
+                            Ramdom image Url:
+                            <input id="imgurl" type="text" name="imgurl" value="http://..................">
+                            <br><br>
+                            Code you would like to share?:<br>
+                            <textarea id="codeSh" rows="10" cols="80" type="text" name="lastname"></textarea><br>
+                            <br>
+
+
+
+                            <button type="button" onclick="saveLocalStorage()">Save Data</button><br>
+                            <p id="submitBtn"></p>
+                            
+
+
+
+                        </form>
+                      
+
+
+
+<p id="demo">          </p>
+
+  </article>
+</section>
+<footer>
+  <p id="foot"></p>
+</footer>
+<script type='text/javascript' src="scriptJS.js"></script>
+</body>
+</html>
+
+
