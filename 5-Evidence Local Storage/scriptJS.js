@@ -19,7 +19,6 @@ function saveLocalStorage(){
 
   console.log(localStorage.getItem("titleW"));
   console.log(localStorage.getItem("nameW"));
-  console.log(localStorage.getItem("lastname"));
   console.log(localStorage.getItem("majorW"));
   console.log(localStorage.getItem("contentW"));
   console.log(localStorage.getItem("imgurlW"));
