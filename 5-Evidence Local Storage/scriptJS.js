@@ -5,7 +5,6 @@ function saveLocalStorage(){
 
   localStorage.setItem("titleW", document.getElementById("tittleWeb").value);
   localStorage.setItem("nameW", document.getElementById("name").value);
-  localStorage.setItem("lastnameW", document.getElementById("last").value);
   localStorage.setItem("majorW", document.getElementById("major").value);
   localStorage.setItem("contentW", document.getElementById("content").value);
   localStorage.setItem("imgurlW", document.getElementById("imgurl").value);
