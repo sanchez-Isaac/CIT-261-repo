@@ -126,3 +126,7 @@
   th tr {
     border: 1px solid #dddddd;
   }
+
+.tdColorImg{
+  background-color: white;
+}

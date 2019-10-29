@@ -1,5 +1,6 @@
 /**This is the file we are going to work with*/
 
+
 function requestJSON(){
 
     var xhttp = new XMLHttpRequest();    
@@ -13,3 +14,4 @@ function requestJSON(){
     xhttp.open("GET", "file.txt", true);
     xhttp.send();
   }
+
