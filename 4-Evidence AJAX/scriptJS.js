@@ -21,6 +21,24 @@ var finalUrl;
 
 
 
+
+function Unix_timestamp(t){
+  var dt = new Date(t*1000);
+  var hr = dt.getHours();
+  var m = "0" + dt.getMinutes();
+  var s = "0" + dt.getSeconds();
+  return hr+ ':' + m.substr(-2) + ':' + s.substr(-2);  
+  }
+  
+
+
+
+
+
+
+
+
+
 function requestJSON(){
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -70,8 +88,8 @@ xhttp.onreadystatechange = function() {
     document.getElementById("cloudAPI").innerHTML = " "+ jsonObj.weather[0].description;
     document.getElementById("pressureAPI").innerHTML = jsonObj.main.pressure+" hpa";
     document.getElementById("humidAPI").innerHTML = jsonObj.main.humidity+"%";
-    document.getElementById("sunrAPI").innerHTML = jsonObj.sys.sunrise;
-    document.getElementById("sunsAPI").innerHTML = jsonObj.sys.sunset;
+    document.getElementById("sunrAPI").innerHTML = (Unix_timestamp(jsonObj.sys.sunrise))+" Hrs";
+    document.getElementById("sunsAPI").innerHTML = (Unix_timestamp(jsonObj.sys.sunset))+" Hrs";
     document.getElementById("geoAPI").innerHTML =  '<p><a href="' +coordinates+jsonObj.coord.lat +'°,'+jsonObj.coord.lon +'°'+ '"</a>Google Maps</p>';   
     document.getElementById("tempAPI").innerHTML = jsonObj.main.temp+"°";
 
@@ -85,12 +103,6 @@ xhttp.onreadystatechange = function() {
 };
 xhttp.open("GET", url, true);
 xhttp.send();
-
-
-
-
-
-
-
-
   }
+
+
