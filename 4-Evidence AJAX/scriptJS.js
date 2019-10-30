@@ -92,6 +92,7 @@ xhttp.onreadystatechange = function() {
     document.getElementById("sunsAPI").innerHTML = (Unix_timestamp(jsonObj.sys.sunset))+" Hrs";
     document.getElementById("geoAPI").innerHTML =  '<p><a href="' +coordinates+jsonObj.coord.lat +'°,'+jsonObj.coord.lon +'°'+ '"</a>Google Maps</p>';   
     document.getElementById("tempAPI").innerHTML = jsonObj.main.temp+"°";
+    document.getElementById("countAPI").innerHTML = jsonObj.sys.country;
 
 
   }
