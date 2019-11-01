@@ -225,7 +225,7 @@ function dispNewElem4(){
 
 
   title.innerHTML = "<div class='container text-center'><br><h1> DOM Manipulation - WORKING EXAMPLE</h1>"
-  divi.innerHTML = "<p> <p>Add to the list: <input type='text' id='input'><button id='addBtn' onclick='addItemlast()'>insertLast()</button><button id='addBtn' onclick='addItem()'>insertBefore()</button><br><br><ul id='items'></ul></p>";
+  divi.innerHTML = "<p> <p>Add to the list: <input type='text' id='input'><button id='addBtn' onclick='addItemlast()'>normalInsert()</button><button id='addBtn' onclick='addItem()'>insertBefore()</button><br><br><ul id='items'></ul></p>";
   newBtnDel.innerHTML = "Click here to go back"
 
 
@@ -259,8 +259,8 @@ function delNewElem4(){
 
 function addItem(){
   var item = document.createElement("li");
-  var inputText = document.getElementById('input').value;
-  if (inputText == "") { item.innerHTML = "Null"; } else { item.innerHTML = inputText; }
+  var input = document.getElementById('input').value;
+  if (input == "") { item.innerHTML = "Null"; } else { item.innerHTML = input; }
   var list = document.getElementById('items');
   list.insertBefore(item, list.childNodes[0]);
 }
@@ -268,9 +268,9 @@ function addItem(){
 
 function addItemlast(){
   var item = document.createElement("li");
-  var inputText = document.getElementById('input').value;
-  if (inputText == "") { item.innerHTML = "Null";} 
-  else { item.innerHTML = inputText; }  document.getElementById("items").appendChild(item);
+  var input = document.getElementById('input').value;
+  if (input == "") { item.innerHTML = "Null";} 
+  else { item.innerHTML = input; }  document.getElementById("items").appendChild(item);
 }
 
 
