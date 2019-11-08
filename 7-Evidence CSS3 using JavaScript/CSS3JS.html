@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS3 Manipulation using JavaScript</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h2>CSS3 using JavaScript - Manipulating CSS Class Properties Using JavaScript</h2>
+</header>
+<section>
+  <nav>
+    <ul class="navstyle">
+      <li class="navstyle2"><a class="navstyleHover" href="https://sanchez-isaac.github.io/CIT-261-repo/">Home</a></li>
+      <li class="navstyle2"><a class="navstyleHover" href="https://github.com/sanchez-Isaac/CIT-261-repo/tree/master/1-Evidence%20JavaScript">JavaScript Repo</a></li>
+      <li class="navstyle2"><a class="navstyleHover" href="https://byui.instructure.com/courses/65978">CIT-261 Dasboard</a></li>
+      
+      <br>  
+    <p></p>
+    </ul>
+    
+  </nav>  
+  <article>
+
+        <div class="container text-center">
+                <br><br>
+            <h1>Style background Property</h1>
+                <div class="container text-center">The background property sets or returns up to eight separate background properties, in a shorthand form.<br> <br>With this property, you can set/return one or more of the following (in any order):</div>
+                <ul>
+                  <li>background-color</li>
+                  <li>background-image</li>
+                  <li>background-repeat</li>
+                  <li>background-attachment</li>
+                  <li>background-position</li>
+                  <li>background-size</li>
+                  <li>background-origin</li>
+                  <li>background-clip</li>
+                </ul>
+                <table class="w3-table-all notranslate">
+                    <tbody><tr>
+                    <th style="width:20%">Value</th>
+                      <th>Description</th>
+                    </tr>
+                    <tr>
+                      <td>color</td>
+                      <td>Sets the background color of an element</td>
+                    </tr>
+                    <tr>
+                      <td>image</td>
+                      <td>Sets the background image for an element</td>
+                    </tr>
+                    <tr>
+                      <td>repeat</td>
+                      <td>Sets how a background image will be repeated</td>
+                    </tr>
+                    <tr>
+                      <td>attachment</td>
+                      <td>Sets whether a background image is fixed or scrolls with the page</td>
+                    </tr>
+                    <tr>
+                      <td>position</td>
+                      <td>Sets the starting position of a background image</td>
+                    </tr>
+                    <tr>
+                      <td><i>size</i></td>
+                      <td>Sets the size of a background image</td>
+                    </tr>
+                    <tr>
+                      <td><i>origin</i></td>
+                      <td>Sets the background positioning area</td>
+                    </tr>
+                    <tr>
+                      <td><i>clip</i></td>
+                      <td>Sets the painting area of a background image</td>
+                    </tr>
+                    <tr>
+                      <td>initial</td>
+                      <td>Sets this property to its default value.</td>
+                      </tr>
+                    <tr>
+                      <td>inherit</td>
+                      <td>Inherits this property from its parent element.</td>
+                      </tr>
+                  </tbody></table>
+                  <br><p>Example:</p> 
+                  <p>This example will change the background color of the black square that contains the code</p>                  
+                  <code id="example1"> 
+                      var colorIn = document.getElementById("color");<br>
+                      var hexIn = document.getElementById("hex");<br><br><br> 
+                      function backColorChange(){<br>
+                        var colorBack = colorIn.value;<br>
+                        hexIn.value = colorBack;<br><br>
+                        document.getElementById("example1").style.backgroundColor = colorBack;  <br>
+                      }<br>
+                      
+                      
+
+
+
+                     <br><br>
+                      
+                      <input size="3" type="text" id="hex">
+                      <input style="width: 2em" type="color" id="color" oninput="backColorChange()">
+
+                  </code>
+                  <div class="container text-center"><br><br> If you want to experiment a little more, use the console and type <b>"document.body.style.backgroundColor = '#AddAHexValue';" </b></div>      
+                  
+
+                        
+        </div>  
+        <p><b>_________________________________________________________________</b></p> 
+
+        <br>
+        <div class="container text-center">
+            <br><br>
+        <h1>Style fontSize Property</h1>
+            <div class="container text-center">The fontSize property is used to set or get the font size of characters in a word should appear.</div>
+            <table class="w3-table-all notranslate">
+                <tbody><tr>
+                <th style="width:20%">Value</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>xx-small<br>
+                x-small<br>
+                small<br>
+                medium<br>
+                large<br>
+                x-large<br>
+                xx-large</td>
+                  <td>Sets the size of the font to different fixed sizes, from  xx-small to xx-large</td>
+                </tr>
+                <tr>
+                  <td>smaller</td>
+                  <td>Decreases the font-size by one relative unit</td>
+                </tr>
+                <tr>
+                  <td>larger</td>
+                  <td>Increases the font-size by one relative unit</td>
+                </tr>
+                <tr>
+                  <td><i>length</i></td>
+                  <td>Defines the font-size in length units</td>
+                </tr>
+                <tr>
+                  <td><i>%</i></td>
+                  <td>Sets the font-size to a % of&nbsp; the parent element's font size</td>
+                </tr>
+                <tr>
+                  <td>initial</td>
+                  <td>Sets this property to its default value. </td>
+                  </tr>
+                <tr>
+                  <td>inherit</td>
+                  <td>Inherits this property from its parent element. </td>
+                  </tr>
+              </tbody></table>
+            
+              <br><p>Example:</p> 
+              <p>This example will change the size of the black square that contains the code with a number input.</p>                  
+              
+              <code id="example2">
+                  document.getElementById("example2").style.fontSize = "xx-small";
+                <br>
+                document.getElementById("example2").style.fontSize = "x-small";
+                <br>
+                document.getElementById("example2").style.fontSize = "small";
+                <br>
+                document.getElementById("example2").style.fontSize = "small";
+                <br>
+                document.getElementById("example2").style.fontSize = "medium";
+                <br><br> <p style="color: green;">Or you can use a PX value</p>
+                  function sizeChanger(){<br><br>
+                    var listValue = document.getElementById("numbSize").value;<br>
+                    document.getElementById("example2").style.fontSize = listValue+"px";<br>
+                  }<br>  
+                 <br><br>
+                  
+               
+                  <input style="width: 3em" type="number" id="numbSize" onchange="sizeChanger()" value="13">
+
+              </code>
+              <div class="container text-center"><br><br>Copy some of the examples and use the console to see it for your self 
+                   <p><b>_________________________________________________________________</b></p> 
+
+
+                   <div class="container text-center">
+                      <br><br>
+                  <h1>Style Color Property</h1>
+                      <div class="container text-center">The HTML DOM Style color property is used for getting or setting the color for the text. The color for the text can be specified in hexadecimal, rgb(), rgba(), hsl(), hsla() or using known keyword.</div>
+                      
+                        <br><p>Example:</p> 
+                        <p>This example will change the font color of the black square that contains the code</p>                  
+                        <code id="example3"> 
+                            var colorIn2 = document.getElementById("color2");<br>
+                            var hexIn2 = document.getElementById("hex2");<br><br>
+                            function fontColorChange(){<br><br>
+                              var colorBack = colorIn2.value;<br>
+                              hexIn2.value = colorBack;<br>
+                              document.getElementById("example3").style.color = colorBack;  <br>
+                            }<br>
+                            
+                            
+                           <br><br>
+                            
+                            <input size="3" type="text" id="hex2">
+                            <input style="width: 2em" type="color" id="color2" oninput="fontColorChange()">
+      
+                        </code>
+                        <div class="container text-center"><br><br>If you want to experiment a little more, use the console and type <b>"document.body.style.color = '#AddAHexValue';" </b></div>      
+                        
+      
+                              
+              </div>  
+              <p><b>_________________________________________________________________</b></p> 
+      
+              <div class="container text-center">
+                  <br><br>
+              <h1>Style paddingTop, paddingLeft, paddingBottom and paddingRight Property</h1>
+
+                  <div class="container text-center">
+                      The paddingBottom property sets or returns the bottom padding of an element. <br>Both the margin property and the padding property insert space around an element. However, the difference is that margin inserts the space around the border, while padding inserts the space within the border of an element.<br><br>
+                      The paddingLeft property sets or returns the left padding of an element.<br> Both the margin property and the padding property insert space around an element. However, the difference is that margin inserts the space around the border, while padding inserts the space within the border of an element.<br><br>
+                      The paddingRight property sets or returns the right padding of an element.<br> Both the margin property and the padding property insert space around an element. However, the difference is that margin inserts the space around the border, while padding inserts the space within the border of an element.<br><br>
+                      The paddingTop property sets or returns the top padding of an element.<br>The padding properties define the space between the element border and the element content.<br>Both the margin property and the padding property insert space around an element. However, the difference is that margin inserts the space around the border, while padding inserts the space within the border of an element.<br><br>
+                    
+                    </div>
+                  
+                    <br><p>Example:</p> 
+                    <p>This example will move the div acording to the user input of the black square that contains the code. <br><br><p style="color: red;">NOTE:</p> The Right Property will not demo a change becasue the div is already set as automatic </p>                  
+                    <code id="example4"> 
+                 
+function positionChangerTop(){<br><br>
+  var listValue = document.getElementById("numbPositTop").value;<br>
+  document.getElementById("example4").style.paddingTop  = listValue+"px";<br><br><br>
+
+
+}function positionChangerLeft(){<br><br>
+  var listValue = document.getElementById("numbPositLeft").value;<br>
+  document.getElementById("example4").style.paddingLeft  = listValue+"px";<br><br><br>
+
+}function positionChangerBottom(){<br><br>
+  var listValue = document.getElementById("numbPositBottom").value;<br>
+  document.getElementById("example4").style.paddingBottom  = listValue+"px";<br><br><br>
+
+}function positionChangerRight(){<br><br>
+  var listValue = document.getElementById("numbPositRight").value;<br>
+  document.getElementById("example4").style.paddingRight  = listValue+"px";<br>
+}<br><br>
+                        
+                        
+                       <br><br><label>Change Top:</label>
+                       <input style="width: 3em" type="number" id="numbPositTop" onchange="positionChangerTop()" value="13"><br>
+                       <label>Change Left:</label>
+                       <input style="width: 3em" type="number" id="numbPositLeft" onchange="positionChangerLeft()" value="13"><br>
+                       <label>Change Right:</label>
+                       <input style="width: 3em" type="number" id="numbPositRight" onchange="positionChangerBottom()" value="13"><br>
+                       <label>Change Bottom:</label>
+                       <input style="width: 3em" type="number" id="numbPositBottom" onchange="positionChangerBottom()" value="13"><br>
+    
+
+                       
+                       
+                    </code>
+                     
+                    
+  
+                          
+          </div>  
+       
+
+  </article>
+</section>
+<footer>
+  <p id="foot"></p>
+</footer>
+<script type='text/javascript' src="scriptJS.js"></script>
+</body>
+</html>
+
+
