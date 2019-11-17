@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JS Animations, Transitions and Transforms</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h2>CSS3 Transitions, Animations, and Transformations</h2>
+</header>
+<section>
+  <nav>
+    <ul class="navstyle">
+      <li class="navstyle2"><a class="navstyleHover" href="https://sanchez-isaac.github.io/CIT-261-repo/">Home</a></li>
+      <li class="navstyle2"><a class="navstyleHover" href="https://github.com/sanchez-Isaac/CIT-261-repo/tree/master/1-Evidence%20JavaScript">JavaScript Repo</a></li>
+      <li class="navstyle2"><a class="navstyleHover" href="https://byui.instructure.com/courses/65978">CIT-261 Dasboard</a></li>
+      
+      <br>  
+    <p></p>
+    </ul>
+    
+  </nav>  
+  <article>
+
+        <div class="container text-center">
+                <br><br>
+            <h1 id="title1"> CSS3 Animations</h1>
+                <div id="subtle1" >CSS animations make it possible to animate transitions from one CSS style configuration to another. Animations consist of two components, a style describing the CSS animation and a set of keyframes that indicate the start and end states of the animation’s style, as well as possible intermediate waypoints.</div>
+               
+                <div id="content1"><ol>
+                    <li>They’re easy to use for simple animations; you can create them without even having to know JavaScript.</li>
+                    <li>The animations run well, even under moderate system load. Simple animations can often perform poorly in JavaScript (unless they’re well made). The rendering engine can use frame-skipping and other techniques to keep the performance as smooth as possible.</li>
+                    <li>Letting the browser control the animation sequence lets the browser optimize performance and efficiency by, for example, reducing the update frequency of animations running in tabs that aren't currently visible.</li>
+                </ol></div>
+                <br>
+                <br>
+                <table id="table1">
+                    <tr>
+                      <th>Animation</th>
+                      <th>Details</th>                      
+                    </tr>
+                    <tr>
+                      <td>animation-name</td>
+                      <td>Specifies the name of the @keyframes at-rule describing the animation’s keyframes.</td>
+                    </tr>
+                    <tr>
+                        <td>animation-timing-function</td>
+                        <td>Configures the timing of the animation; that is, how the animation transitions through keyframes, by establishing acceleration curves.</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>animation-delay</td>
+                        <td>Configures the delay between the time the element is loaded and the beginning of the animation sequence.</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>animation-iteration-count</td>
+                        <td>Configures the number of times the animation should repeat; you can specify infinite to repeat the animation indefinitely.</td>
+                       
+                    </tr>
+                    <tr>
+                        <td>animation-direction</td>
+                        <td>Configures whether or not the animation should alternate direction on each run through the sequence or reset to the start point and repeat itself.</td>
+                      
+                    </tr>
+                    <tr>
+                        <td>animation-fill-mode</td>
+                        <td>Configures what values are applied by the animation before and after it is executing.
+                          </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>animation-play-state</td>
+                        <td>Lets you pause and resume the animation sequence.</td>
+                        
+                    </tr>
+                  </table>
+           
+
+
+             
+
+                        
+        </div>  
+        <p><b>_________________________________________________________________</b></p> 
+
+        <br>
+      
+        <div class="container text-center">
+          <br><br>
+      <h1 id="title1"> CSS3 Transitions</h1>
+          <div id="subtle1">CSS transitions provide a way to control animation speed when changing CSS properties. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time. For example, if you change the color of an element from white to black, usually the change is instantaneous. With CSS transitions enabled, changes occur at time intervals that follow an acceleration curve, all of which can be customized.
+<br><br>
+              Animations that involve transitioning between two states are often called implicit transitions as the states in between the start and final states are implicitly defined by the browser.</div>
+          
+              <br>
+              <br>
+              <table id="table1">
+                  <tr>
+                    <th>Transition</th>
+                    <th>Details</th>                      
+                  </tr>
+                  <tr>
+                    <td>transition-property</td>
+                    <td>Specifies the name or names of the CSS properties to which transitions should be applied. Only properties listed here are animated during transitions; changes to all other properties occur instantaneously as usual.</td>
+                  </tr>
+                  <tr>
+                      <td>transition-duration</td>
+                      <td>Specifies the duration over which transitions should occur. You can specify a single duration that applies to all properties during the transition, or multiple values to allow each property to transition over a different period of time.</td>
+                      
+                  </tr>
+                  <tr>
+                      <td>transition-timing-function</td>
+                      <td>Specifies a function to define how intermediate values for properties are computed. Timing functions determine how intermediate values of the transition are calculated. Most timing functions can be specified by providing the graph of the corresponding function, as defined by four points defining a cubic bezier.</td>
+                      
+                  </tr>
+                  <tr>
+                      <td>transition-delay</td>
+                      <td>Defines how long to wait between the time a property is changed and the transition actually begins.</td>
+                     
+                  </tr>
+                </table>
+              
+            
+
+                  
+  </div>  
+  <p><b>_________________________________________________________________</b></p> 
+
+  <br>
+
+     
+  <div class="container text-center">
+    <br><br>
+<h1 id="title1">CSS3 Transforms</h1>
+    <div id="subtle1">The transform CSS property lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled, and skewed. We manipulate an elements appearance using transform functions. The value of the transform property is a list of space-separated transform functions applied in the order provided.<br><br> The transform functions include:</div>
+    
+    <table id="table1">
+        <tr>
+          <th>Transforms</th>
+          <th>Details</th>                      
+        </tr>
+        <tr>
+          <td>translate()</td>
+          <td>The translate(x, y) function is similar to relative positioning, translating, or relocating, an element by x from the left, and y from the top.</td>
+        </tr>
+        <tr>
+            <td>translateX()</td>
+            <td>The translateX(x) function is similar to the translate() function above, but only the left/right value is specified</td>
+            
+        </tr>
+        <tr>
+            <td>translateY()</td>
+            <td>The translateY(y) function is similar to the translate() function above, but only the top/bottom value is specified</td>
+            
+        </tr>
+        <tr>
+            <td>scale()</td>
+            <td>The scale(w, h) property scales an element by w width and h height. If only one value is declared, the scaling will be proportional. Since you likely don’t want to distort an element, you’ll generally see only one parameter in this transform function</td>
+           
+        </tr>
+        <tr>
+            <td>scaleX()</td>
+            <td>The scalex(w) function is similar to the scale() function above, but only the width value is specified. It is the same as declaring scale(w, 1)</td>
+           
+        </tr>
+        <tr>
+            <td>scaleY()</td>
+            <td>The scaley(y) function is similar to the scale() function above, but only the height value is specified. It is the same as declaring scale(1, h)</td>
+           
+        </tr>
+        <tr>
+            <td>rotate()</td>
+            <td>The rotate(angle) function with rotate an element about the point of origin (described below) but the angle value specified.</td>
+           
+        </tr>
+        <tr>
+            <td>skew()</td>
+            <td>The skew(x,y) function specifies a skew along the X and Y axes. The x specifies the skew on the x-axis, the y specifies the skew on the y-axis. If there is only one parameter, then it’s the same as skew(x, 0), or skewX(x) . The values are angles: degrees, turns or grads.</td>
+           
+        </tr>
+        <tr>
+            <td>skewX()</td>
+            <td>The skewx(x) function is similar to the skew() value above, but only the x-axis value is specified. It is the same as declaring skew(x,0)</td>
+           
+        </tr>
+        <tr>
+            <td>skewY())</td>
+            <td>The skewy(y) function is similar to the skew() value above, but only the y-axis value is specified. It is the same as declaring skew(0,y).</td>
+           
+        </tr>
+      </table>  
+      
+
+            
+</div>  
+<p><b>_________________________________________________________________</b></p> 
+
+<br>
+<div> <button id="ex1" onclick="moveScrip11()">Click Here</button>  </div>
+<br> <div id="ex2" class="boxsss" style="background-color: blue; color: white" onclick="moveScrip4()"> Double Click here </div>
+<br> <div id="ex2" class="box" style="background-color: green; color: white" onclick="moveScrip2()"> Double Click here </div>
+<br> <div id="ex2" class="boxs" style="background-color: purple; color: white" onclick="moveScrip3()"> Double Click here </div>
+<br> <div id="ex2" class="boxss" style="background-color: red; color: white" onclick="moveScrip1()"> Double Click here </div>
+
+ 
+
+
+  </article>
+</section>
+<footer>
+  <p id="foot"></p>
+</footer>
+<script type='text/javascript' src="scriptJS.js"></script>
+</body>
+</html>
+
+
