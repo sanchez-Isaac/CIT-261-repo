@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>JS Events</title>
+<title>Media</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body  onload="onLoadFunction()" onmouseover="onMouseOverFunction(event)">
+<body>
 <header>
-  <h2>JavaScript Events - Standard JavaScript Events Including those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.) and Animation and Transition Events</h2>
+  <h2>DOM Manipulation - showing createElement, appendChild, insertBefore, removeChild, etc</h2>
 </header>
 <section>
   <nav>
@@ -22,27 +22,30 @@
     </ul>
     
   </nav>  
-  <article >
+  <article>
 
         <div class="container text-center">
                 <br><br>
-            <h1> JavaScript Events</h1>
-                <div class="container text-center">In web development terms, an “event” is something that triggers a specific action in the browser. Usually, an event occurs when a user loads a page, clicks on a button or performs some other task with the mouse or keyboard. This page lists the most common events that can be inserted into JavaScript code to react to user actions.
+            <h1> Media Tags</h1>
+                <div class="container text-center">HTML5 features include native audio and video support without the need for Flash.
 
-                   <br><br> There are many ways to add events to a page and many JavaScript frameworks simplify the process. In order to show code that doesn’t depend on using a particular framework, all examples below will use John Resig’s addEvent function.
-                    
-                   <br><br> If you’d like to try out the examples on your own computer, you’ll need to start with this template and add the HTML and JavaScript where instructed.
-                    
+                    The HTML5 <audio> and <video> tags make it simple to add media to a website. You need to set src attribute to identify the media source and include a controls attribute so the user can play and pause the media.
+                      
                     </div>
-                  <br><p>Example:</p>                    
-                  <p id="ex1"></p>
-                  <br><br>
-                  <img onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)" border="0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/WelshCorgi.jpeg/482px-WelshCorgi.jpeg" alt="Smiley" width="32" height="32">
-           
-                        
+                
+                  <br><p>This is a video from my mission:</p>                    
+                  <p><video width="320" height="240" controls="">
+                      <source src="Elders_kickbroom_competition(youtube.com).mp4" type="video/mp4">
+                    </video>
+                </p>
+                <br>
+                <p>Audio:</p>         
+                <audio controls="">
+                    <source src="videoplayback.mp3" type="audio/mp4">
+                  </audio>
         </div>  
         <p><b>_________________________________________________________________</b></p> 
-
+        <p>Canvas:</p>   <canvas id="canvas1" width="400" height="100" style="border:1px dashed red;">Your browser does not support canvases</canvas>
         <br>
 
 
