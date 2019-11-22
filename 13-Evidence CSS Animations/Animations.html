@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DOM</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h2>DOM Manipulation - showing createElement, appendChild, insertBefore, removeChild, etc</h2>
+</header>
+<section>
+  <nav>
+    <ul class="navstyle">
+      <li class="navstyle2"><a class="navstyleHover" href="https://sanchez-isaac.github.io/CIT-261-repo/">Home</a></li>
+      <li class="navstyle2"><a class="navstyleHover" href="https://github.com/sanchez-Isaac/CIT-261-repo/tree/master/1-Evidence%20JavaScript">JavaScript Repo</a></li>
+      <li class="navstyle2"><a class="navstyleHover" href="https://byui.instructure.com/courses/65978">CIT-261 Dasboard</a></li>
+      
+      <br>  
+    <p></p>
+    </ul>
+    
+  </nav>  
+  <style>
+      div.ex1 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+        animation-name: example;
+        animation-duration: 4s;
+        animation: example 5s infinite;
+      }
+      
+      /* Safari 4.0 - 8.0 */
+      @-webkit-keyframes example {
+        0%   {background-color: red;}
+        25%  {background-color: yellow;}
+        50%  {background-color: blue;}
+        100% {background-color: green;}
+      }
+      
+      /* Standard syntax */
+      @keyframes example {
+        0%   {background-color: red;}
+        25%  {background-color: yellow;}
+        50%  {background-color: blue;}
+        100% {background-color: green;}
+      }
+
+
+      div.ex2 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 2s;
+     animation: example 5s infinite;
+  
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+  
+}
+
+/* Standard syntax */
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+
+.flip-scale-2-hor-top {
+  animation: flip-scale-2-hor-top 0.5s ease-in-out reverse forwards infinite;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+@keyframes flip-scale-2-hor-top {
+  0% {
+    transform: translateY(0) rotateX(0) scale(1);
+    transform-origin: 50% 0%;
+  }
+  50% {
+    transform: translateY(-50%) rotateX(-90deg) scale(2);
+    transform-origin: 50% 50%;
+  }
+  100% {
+    transform: translateY(-100%) rotateX(-180deg) scale(1);
+    transform-origin: 50% 100%;
+  }
+}
+
+.rotate-scale-up {
+  animation: rotate-scale-up 0.65s linear both infinite;
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+}
+
+@keyframes rotate-scale-up {
+  0% {
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+
+
+      </style>
+  <article>
+
+        <div class="container text-center">
+                <br><br>
+            <h1> CSS3 Animations</h1>
+            
+                
+                <div class="ex1"></div>   
+                
+        <br>
+
+        <br>
+
+                <div class="ex2"></div> 
+                
+        <br>
+
+        <br>
+
+                <div class="flip-scale-2-hor-top"></div> 
+                
+        <br>
+
+        <br>
+
+        <br>
+
+                <div class="rotate-scale-up"></div> 
+                
+        <br>
+
+        <br>
+
+
+                        
+        </div>  
+        <p><b>_________________________________________________________________</b></p> 
+
+        <br>
+
+
+
+  </article>
+</section>
+<footer>
+  <p id="foot"></p>
+</footer>
+<script type='text/javascript' src="scriptJS.js"></script>
+</body>
+</html>
+
+
