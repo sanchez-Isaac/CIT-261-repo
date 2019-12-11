@@ -121,6 +121,12 @@ xhttp.open("GET", url, true);
 xhttp.send();
   }
 
+
+
+
+
+
+  
   document.getElementById("weatherimg").style.animation = "imgAnim";
   
 
