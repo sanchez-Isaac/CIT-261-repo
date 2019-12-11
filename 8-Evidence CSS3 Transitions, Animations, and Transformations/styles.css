@@ -301,3 +301,20 @@
     background-color:red; left:0px; top:0px;
   }
 }
+
+
+@keyframes zoominoutsinglefeatured {
+  0% {
+      transform: scale(0,0);
+  }
+  50% {
+      transform: scale(1.2,1.2);
+  }
+  100% {
+      transform: scale(1,1);
+  }
+}
+
+.googlemapClass img {
+animation: zoominoutsinglefeatured 1s ;
+}
