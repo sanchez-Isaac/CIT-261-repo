@@ -1,0 +1,322 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: lato, Helvetica, sans-serif;
+  }
+  
+  header {
+    background-color: #666;
+    padding: 1px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+  }
+  
+  
+  nav {
+    float: left;
+    width: 18%;
+    height: 900px; 
+    background: #ccc;
+    padding: 10px;
+  }
+  
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: auto; 
+  }
+  
+  
+  section:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+  
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  
+  .background {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Brigham_Young_University–Idaho_medallion.svg/270px-Brigham_Young_University–Idaho_medallion.svg.png");
+    display: inline-block;
+    font-size: 0;
+  }
+  .background img {
+    -webkit-transition: all .5s;
+  }
+  .background img:hover {
+    opacity: 0.9;
+  }
+  .navstyle{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #ccc;
+  
+  }
+  .navstyle2 .navstyleHover {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  
+  }
+  
+  
+  .navstyle2 .navstyleHover:hover {
+  background-color: #555;
+  color: white;
+   font-weight: bold;
+  }
+  
+  a.ex2:hover, a.ex2:active {
+    font-size: 105%;
+    font-weight: bold;
+  }
+
+  code{
+
+    background-color: #000;
+    border: 7px solid #b4b6ae;
+    display: block;
+    padding: 20px;
+    margin: auto;
+    color: yellow;
+  }
+  
+  
+  .table{
+    padding: 8px 8px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+    color: #000!important;
+    background-color: #fff!important;
+  }
+  tr:nth-child(even) {
+    background-color: #dddddd;
+}
+  th tr {
+    border: 1px solid #dddddd;
+  }
+
+.tdColorImg{
+  background-color: white;
+}
+
+#map{
+  height: 700px;
+  width: 100%;
+}
+
+#tableid{
+  display: none;
+}
+
+
+
+
+
+#weatherimg {
+  
+  display: block;
+  width: 50px;
+  height: 50px; 
+  transition: 
+  width 2s,
+  height 2s,
+  transform 4s;
+}
+
+
+#weatherimg:hover {
+  
+  height: 200px;
+  width: 200px;
+  transition: 
+  width 2s,
+  height 2s,  
+  transform 2s;
+
+}
+
+#title1 {
+  position: relative;
+  animation-name: title1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  /*animation-delay: 2s;*/
+
+  font-size: 25px;
+  
+    
+    -webkit-transition: all 1s;
+       -moz-transition: all 1s;
+         -o-transition: all 1s;
+            transition: all 1s;
+}
+
+#title1:hover
+{
+  text-transform: uppercase ; 
+  font-size: 30px;
+}
+
+@keyframes title1 {
+  0% {left: -1000px;}
+  100% {left: 0;}
+  
+} 
+
+#title2 {
+  position: relative;
+  animation-name: title1;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+ 
+}
+
+
+@keyframes title1 {
+  0% {left: -1000px;}
+  100% {left: 0;}
+  
+} 
+
+
+.tableclass{
+  position: relative;
+  animation-name: table1;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+ 
+}
+@keyframes table1 {
+  0% {left: -1000px;}
+  100% {left: 0;}
+  
+} 
+
+#city, #citylab {
+  position: relative;
+  font-size: larger;
+  animation-name: grow1;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+ }
+ #countrycode, #countrylab {
+  position: relative;
+  font-size: larger;
+  animation-name: grow3;
+  animation-duration: 5.7s;
+  animation-fill-mode: forwards;
+ }
+#formats, #formatlab {
+  position: relative;
+  font-size: larger;
+  animation-name: grow2;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+ }
+
+#submit {
+  position: relative;
+  animation-name: grow4;
+  animation-duration: 6.7s;
+  animation-fill-mode: forwards;
+  font-size: larger;
+}
+@keyframes grow1 {
+  0% {left: -1000px;}
+  100% {left: 0px;}
+  } 
+@keyframes grow2 {
+  0% {left: -1000px;}
+  100% {left: 0px;}
+  } 
+@keyframes grow3 {
+  0% {left: -1000px;}
+  100% {left: 0px;}
+  } 
+@keyframes grow4 {
+  0% {left: -1000px;}
+  100% {left: 0px;}
+  } 
+
+
+  
+  
+  #tempAPI,
+   #windAPI,
+   #cloudAPI,
+   #pressureAPI,
+   #humidAPI,
+   #sunrAPI,
+   #sunsAPI,
+   #countAPI,
+   #geoAPI
+    {
+  
+      
+      -webkit-transition: all .08s;
+         -moz-transition: all .08s;
+           -o-transition: all .08s;
+              transition: all .08s;
+  }
+  
+  #tempAPI:hover,
+   #windAPI:hover, 
+   #cloudAPI:hover,
+   #pressureAPI:hover,
+   #humidAPI:hover,
+   #sunrAPI:hover,
+   #sunsAPI:hover,
+   #countAPI:hover,
+   #geoAPI:hover
+  {    
+    font-size: 23px;
+    font-weight: bold;
+  }
+
+  @keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(0,0);
+    }
+    50% {
+        transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+.googlemapClass {
+	animation: zoominoutsinglefeatured 1s ;
+}
